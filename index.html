@@ -22,6 +22,16 @@
             color: white;
             padding: 10px 0;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
         }
 
         header h1 {
@@ -41,6 +51,7 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2em;
+            cursor: pointer;
         }
 
         .wrapper {
@@ -124,18 +135,30 @@
         footer p {
             margin: 0;
         }
+
+        .content {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
+        <img src="images/logo.png" alt="Logo">
         <h1>YouTube Video Search</h1>
     </header>
     <nav>
-        <a href="#home"><i class="fas fa-home"></i> Home</a>
-        <a href="#about"><i class="fas fa-info-circle"></i> About</a>
-        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        <a href="#home" onclick="showHome()"><i class="fas fa-home"></i> Home</a>
+        <a href="#about" onclick="showAbout()"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#contact" onclick="showContact()"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
     <div class="wrapper">
+        <div id="content" class="content"></div>
         <div class="controls">
             <form>
                 <p>
@@ -152,10 +175,29 @@
         </div>
     </div>
     <footer>
-        <p>&copy; 2024 YouTube Video Search. All rights reserved.</p>
+        <p>&copy; Balde 2024 YouTube Video Search. All rights reserved.</p>
     </footer>
 
     <script defer>
+        const content = document.getElementById('content');
+
+        function showHome() {
+            content.innerHTML = `<h2>Welcome to Our Website</h2>
+            <p>This website allows you to search for YouTube videos and view them directly on the page. Use the search bar to find your favorite videos and enjoy!</p>`;
+        }
+
+        function showAbout() {
+            content.innerHTML = `<h2>About Me</h2>
+            <p>My name is Mamadou Balde, a third-year student at Metropolia University of Applied Sciences (UAS) studying Information and Communication Technology with a focus on software engineering. I'm passionate about coding and technology.</p>`;
+        }
+
+        function showContact() {
+            content.innerHTML = `<h2>Contact Me</h2>
+            <p>Email: mamadou.balde@metropolia.fi</p>
+            <p>Phone: +358 465 449 665</p>
+            <p>Address: Myllypurontie 1, 00920 Helsinki, Finland</p>`;
+        }
+
         const searchTerm = document.querySelector('.search');
         const searchForm = document.querySelector('form');
         const submitBtn = document.querySelector('.submit');
