@@ -3,263 +3,631 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube APIs Example</title>
-    <script src="https://apis.google.com/js/client.js" type="text/javascript"></script>
-    <script src="https://www.youtube.com/iframe_api" type="text/javascript"></script>
+    <title>Balde's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-light: #ecf0f1;
+            --text-dark: #2c3e50;
+            --success-color: #2ecc71;
+            --warning-color: #f1c40f;
+            --danger-color: #e74c3c;
+
+            --dark-background: #1a1a1a;
+            --dark-text: #ffffff;
+            --dark-card: #2d2d2d;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #4a5e53;
-            color: #333;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f6fa;
+            color: var(--text-dark);
+        }
+
+        /* Header Styles */
         header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 1rem;
         }
 
-        header img {
+        .logo img {
             width: 50px;
             height: 50px;
-            margin-right: 10px;
             border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            transition: transform 0.3s ease;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        .logo img:hover {
+            transform: scale(1.1);
         }
 
+        /* Navigation Styles */
         nav {
+            background-color: rgba(52, 73, 94, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 100px;
+            z-index: 999;
+        }
+
+        .nav-links {
             display: flex;
             justify-content: center;
-            background-color: #444;
-            padding: 10px 0;
+            gap: 2rem;
+            list-style: none;
         }
 
-        nav a {
-            color: white;
+        .nav-links a {
+            color: var(--text-light);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
-        .wrapper {
-            width: 90%;
-            margin: 20px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .nav-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
         }
 
-        .controls {
+        /* Main Content Styles */
+        .main-content {
+            margin-top: 180px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* YouTube Channel Section */
+        .youtube-section {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        .youtube-section iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 600px;
-            background-color: moccasin;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border-radius: 8px;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
         }
 
-        .controls form {
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-card {
+            background: var(--text-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            background: var(--text-light);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
             display: flex;
             flex-direction: column;
+            gap: 0.5rem;
         }
 
-        .controls label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .controls input[type="text"] {
-            padding: 10px;
-            margin-bottom: 20px;
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
             border: 1px solid #ddd;
             border-radius: 4px;
+            font-family: inherit;
         }
 
-        .controls button {
-            padding: 10px;
-            background-color: #007BFF;
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--accent-color);
             color: white;
+            padding: 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
         }
 
-        .controls button:hover {
-            background-color: #0056b3;
+        .submit-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
         }
 
-        .results {
-            width: 100%;
-        }
-
-        section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .video {
-            width: 100%;
-            max-width: 480px;
-            background-color: white;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
+        /* Footer Styles */
         footer {
-            background-color: #333;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--primary-color);
             color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 40px;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        footer p {
-            margin: 0;
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: var(--dark-background);
+            color: var(--dark-text);
         }
 
-        .content {
-            width: 100%;
-            max-width: 600px;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            border-radius: 8px;
+        body.dark-mode .section {
+            background: var(--dark-card);
+            color: var(--dark-text);
+        }
+
+        body.dark-mode .skill-card,
+        body.dark-mode .project-card {
+            background: var(--dark-card);
+            color: var(--dark-text);
+        }
+
+        /* Responsive Design */
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Update the nav styles for mobile */
+        @media (max-width: 768px) {
+            nav {
+                background-color: transparent;
+                padding: 0;
+                position: static;
+                width: auto;
+                top: auto;
+            }
+
+            .nav-links {
+                display: none; /* Hide by default */
+                position: fixed;
+                top: 90px; /* Adjust based on your header height */
+                right: 0;
+                width: 250px;
+                background-color: var(--secondary-color);
+                padding: 1rem;
+                border-radius: 0 0 0 10px;
+                box-shadow: -2px 2px 10px rgba(0,220,0,0.7);
+            }
+
+            .nav-links.active {
+                display: flex; /* Show when active */
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.8rem 1rem;
+                width: 100%;
+                text-align: left;
+            }
+
+            .hamburger {
+                display: block;
+                z-index: 1000;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Logo">
-        <h1>YouTube Video Search</h1>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Balde's Logo">
+                <h1>Balde's Portfolio</h1>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </header>
+
     <nav>
-        <a href="#home" onclick="showHome()"><i class="fas fa-home"></i> Home</a>
-        <a href="#about" onclick="showAbout()"><i class="fas fa-info-circle"></i> About</a>
-        <a href="#contact" onclick="showContact()"><i class="fas fa-envelope"></i> Contact</a>
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
     </nav>
-    <div class="wrapper">
-        <div id="content" class="content"></div>
-        <div class="controls">
-            <form>
-                <p>
-                    <label for="search">Enter a search term (required): </label>
-                    <input type="text" id="search" class="search" required>
-                </p>
-                <p>
-                    <button class="submit">Submit search</button>
-                </p>
+
+    <main class="main-content">
+        <section id="home" class="section">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hi! I'm Balde, a passionate software engineering student at Metropolia University of Applied Sciences. I love creating innovative solutions and sharing knowledge through my YouTube channel.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I'm a third-year student specializing in Information and Communication Technology. My journey in tech has been exciting, and I'm always eager to learn new technologies and share my knowledge with others.</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5 fa-2x"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt fa-2x"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js fa-2x"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react fa-2x"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node fa-2x"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database fa-2x"></i>
+                    <h3>SQL</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python fa-2x"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java fa-2x"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-android fa-2x"></i>
+                    <h3>Kotlin</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microchip fa-2x"></i>
+                    <h3>IoT System Development</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python fa-2x"></i>
+                    <h3>MicroPython</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database fa-2x"></i>
+                    <h3>PostgreSQL</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-aws fa-2x"></i>
+                    <h3>AWS</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-linux fa-2x"></i>
+                    <h3>Linux</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-github fa-2x"></i>
+                    <h3>DevOps</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-windows fa-2x"></i>
+                    <h3>PowerShell</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code fa-2x"></i>
+                    <h3>TypeScript</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server fa-2x"></i>
+                    <h3>Express.js</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database fa-2x"></i>
+                    <h3>MongoDB</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-code fa-2x"></i>
+                    <h3>Postman</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-contract fa-2x"></i>
+                    <h3>Swagger</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react fa-2x"></i>
+                    <h3>Next.js</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 1" class="project-image">
+                    <div class="project-info">
+                        <h3>Project 1</h3>
+                        <p>Description of project 1</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/api/placeholder/400/200" alt="Project 2" class="project-image">
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>Description of project 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="youtube" class="section">
+            <h2>My YouTube Channel</h2>
+            <div class="youtube-section">
+                <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/AJ8OTwyWgUc?si=5zI7YTJhuEZgtGgW" title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
-        </div>
-        <div class="results">
-            <section></section>
-        </div>
-    </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; Balde 2024 YouTube Video Search. All rights reserved.</p>
+        <div class="footer-content">
+            <div>
+                <h3>Connect With Me</h3>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/balde-mamadou-5a4a75209" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@bal-dez-one" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/baldez300" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Location</h3>
+                <p>Metropolia UAS</p>
+                <p>Helsinki, Finland</p>
+            </div>
+            <div>
+                <p>&copy; 2025 Balde's Portfolio. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script defer>
-        const content = document.getElementById('content');
+    <!-- Dark mode toggle button -->
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+    </div>
 
-        function showHome() {
-            content.innerHTML = `<h2>Welcome to Our Website</h2>
-            <p>This website allows you to search for YouTube videos and view them directly on the page. Use the search bar to find your favorite videos and enjoy!</p>`;
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark mode toggle function
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.querySelector('.dark-mode-toggle i');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
         }
 
-        function showAbout() {
-            content.innerHTML = `<h2>About Me</h2>
-            <p>My name is Balde, a third-year student at Metropolia University of Applied Sciences (UAS) studying Information and Communication Technology with a focus on software engineering. I'm passionate about coding and technology.</p>`;
-        }
+        // Add this to check for saved dark mode preference
+        document.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                const icon = document.querySelector('.dark-mode-toggle i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
 
-        function showContact() {
-            content.innerHTML = `
-                <h2>Contact Me</h2>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/balde-mamadou-5a4a75209" target="_blank">My LinkedIn</a></p>
-                <p>YouTube: <a href="https://www.youtube.com/@bal-dez-one?app=desktop&cbrd=1" target="_blank">My YouTube Channel</a></p>
-                <p>Address: Metropolia, Helsinki, Finland</p>
-            `;
-        }
-
-        const searchTerm = document.querySelector('.search');
-        const searchForm = document.querySelector('form');
-        const submitBtn = document.querySelector('.submit');
-        const section = document.querySelector('section');
-
-        window.addEventListener('load', onClientLoad);
-
-        function onClientLoad() {
-            gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-        }
-
-        function onYouTubeApiLoad() {
-            gapi.client.setApiKey('AIzaSyB51U7w083RyQWp313hfzliDYsoBdydh4Q');
-            searchForm.addEventListener('submit', search);
-        }
-
-        function search(e) {
+        // Form submission handling
+        const form = document.querySelector('.contact-form');
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const request = gapi.client.youtube.search.list({
-                part: 'snippet',
-                maxResults: 10,
-                q: searchTerm.value
-            });
-            request.execute(onSearchResponse);
-        }
-
-        function onSearchResponse(response) {
-            while (section.firstChild) {
-                section.removeChild(section.firstChild);
-            }
-            const results = response.items;
-            for (let i = 0; i < results.length; i++) {
-                displayVideo(results[i], i);
-            }
-        }
-
-        function displayVideo(result, i) {
-            const vid = document.createElement('div');
-            vidId = 'vid' + i;
-            vid.id = vidId;
-            vid.className = 'video';
-            section.appendChild(vid);
-
-            const player = new YT.Player(vidId, {
-                height: '360',
-                width: '480',
-                videoId: result.id.videoId,
-                events: {
-                    'onReady': onPlayerReady
-                }
-            });
-
-            function onPlayerReady(e) {
-                const myId = e.target.id;
-                const duration = e.target.getDuration();
-                if (duration === 0) {
-                    section.removeChild(e.target.a);
-                }
-            }
-        }
+            // Add your form submission logic here
+            alert('Thank you for your message! I will get back to you soon.');
+            form.reset();
+        });
     </script>
 </body>
 </html>
