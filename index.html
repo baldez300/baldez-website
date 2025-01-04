@@ -209,6 +209,10 @@
             gap: 1rem;
             max-width: 600px;
             margin: 0 auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 256, 0.7);
         }
 
         .form-group {
@@ -223,6 +227,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-family: inherit;
+            width: 100%;
         }
 
         .form-group textarea {
@@ -316,7 +321,7 @@
             cursor: pointer;
         }
 
-        /* Update the nav styles for mobile */
+        /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             nav {
                 background-color: transparent;
@@ -358,6 +363,24 @@
             .hamburger {
                 display: block;
                 z-index: 1000;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 1rem;
+                width: 90%;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 0.6rem;
+            }
+
+            .submit-btn {
+                padding: 0.8rem;
             }
         }
     </style>
