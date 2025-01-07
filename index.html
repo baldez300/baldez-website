@@ -28,6 +28,10 @@
             box-sizing: border-box;
         }
 
+        .title-header {
+            color: var(--success-color);
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
@@ -89,6 +93,9 @@
             justify-content: center;
             gap: 2rem;
             list-style: none;
+            max-width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
         }
 
         .nav-links a {
@@ -187,11 +194,12 @@
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s ease;
+            padding-left: 1rem;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
         }
 
         .project-image {
@@ -211,7 +219,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 1rem;
-            background-color: #fff;
+            
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 256, 0.7);
         }
@@ -344,9 +352,14 @@
                 right: 0;
                 width: 160px;
                 background-color: var(--secondary-color);
-                padding: 1rem;
+                padding: .1rem;
                 border-radius: 0 0 0 10px;
                 box-shadow: -2px 2px 10px rgba(0,220,0,0.7);
+                overflow-y: auto;
+
+                max-height: 80vh;
+                overflow-y: auto;
+                flex-direction: column;
             }
 
             .nav-links.active {
@@ -401,7 +414,7 @@
         <div class="header-content">
             <div class="logo">
                 <img src="images/logo.png" alt="Balde's Logo">
-                <h1>Balde's Portfolio</h1>
+                <h1 class="title-header">Balde's Portfolio</h1>
             </div>
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
@@ -416,6 +429,11 @@
             <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
             <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
             <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#work-experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#languages"><i class="fas fa-language"></i> Languages</a></li>
+            <li><a href="#hobbies"><i class="fas fa-gamepad"></i> Hobbies</a></li>
+            <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
             <li><a href="#youtube"><i class="fab fa-youtube"></i> YouTube</a></li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
@@ -423,13 +441,24 @@
 
     <main class="main-content">
         <section id="home" class="section">
-            <h2>Welcome to My Portfolio</h2>
+            <h2>Welcome to My Portfolio 👋</h2>
             <p>Hi! I'm Balde, a passionate software engineering student at Metropolia University of Applied Sciences. I love creating innovative solutions and sharing knowledge through my YouTube channel.</p>
         </section>
 
         <section id="about" class="section">
-            <h2>About Me</h2>
+            <h2>About Me <i class="fas fa-user-circle"></i></h2>
             <p>I'm a third-year student specializing in Information and Communication Technology. My journey in tech has been exciting, and I'm always eager to learn new technologies and share my knowledge with others.</p>
+            <p>With experience in full-stack development, I strive to create innovative solutions that make a difference.</p>
+            <div class="quick-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Helsinki, Finland</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-car"></i>
+                    <span>Driver's License: B</span>
+                </div>
+            </div>
         </section>
 
         <section id="skills" class="section">
@@ -523,6 +552,34 @@
                     <i class="fab fa-react fa-2x"></i>
                     <h3>Next.js</h3>
                 </div>
+                <div class="skill-card">
+                    <i class="fab fa-python fa-2x"></i>
+                    <h3>Django</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-jenkins fa-2x"></i>
+                    <h3>Jenkins</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-docker fa-2x"></i>
+                    <h3>Docker</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server fa-2x"></i>
+                    <h3>Kubernetes</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code-branch fa-2x"></i>
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-github fa-2x"></i>
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-gitlab fa-2x"></i>
+                    <h3>GitLab</h3>
+                </div>                
             </div>
         </section>
 
@@ -548,6 +605,167 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education 🎓</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Metropolia UAS</h3>
+                    <p class="date">2022 - Present</p>
+                    <p>Information and Communication Technology</p>
+                    <ul class="education-details">
+                        <li>Full-stack Development</li>
+                        <li>Data Handling and Machine Learning</li>
+                        <li>Neural Networks</li>
+                    </ul>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Varia Vocational School</h3>
+                    <p class="date">2019 - 2022</p>
+                    <p>Information and Communication Technology</p>
+                    <ul class="education-details">
+                        <li>Network Installation</li>
+                        <li>Computer Assembly</li>
+                        <li>Helpdesk Experience</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <h3>Study Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Flight Game Simulation ✈️🌍</h3>
+                    <p>
+                        An educational game challenging players to visit all continents while minimizing CO2 emissions. 
+                        Players navigate between airports worldwide, collecting country flags and managing their environmental impact. 
+                        Developed using JavaScript for game logic, HTML/CSS for the interface, and SQL for storing high scores and game data.
+                    </p>
+                </div>
+                <div class="project-card">
+                    <h3>Heartbeat Sensor ❤️📈</h3>
+                    <p>
+                        Designed and developed a portable heartbeat sensor using MicroPython, Raspberry Pi Pico W, and a PPG (Photoplethysmography) sensor. 
+                        This real-time system monitors heart electrical activity and displays critical health metrics such as BPM (Beats Per Minute), 
+                        SDNN (Standard Deviation of Normal-to-Normal intervals), RMSSD (Root Mean Square of Successive Differences), 
+                        and autonomic nervous system levels (SNS/PNS) (Sympathetic Nervous System/Parasympathetic Nervous System) on an OLED (Organic Light-Emitting Diode) display.
+                    </p>
+                </div>                
+                <div class="project-card">
+                    <h3>MERN Stack E-Commerce 🛒💻</h3>
+                    <p>
+                        A feature-rich e-commerce web application developed as part of my second-year software development studies at 
+                        Metropolia University of Applied Sciences. Built with the MERN stack (MongoDB, Express.js, React, Node.js), 
+                        the platform includes secure user authentication with JSON Web Tokens, password recovery, Google login, 
+                        a favorites feature, and a shopping cart for a seamless user experience.
+                    </p>
+                </div>                
+                <div class="project-card">
+                    <h3>Music Recommendation System App 🎵🎧</h3>
+                    <p>A full-stack web application that integrates the Spotify API to recommend music based on user preferences. 
+                        Built with Django (backend) and TypeScript (frontend).</p>
+                </div>
+                <div class="project-card">
+                    <h3>Data Processing and Machine Learning 📊🤖🍄</h3>
+                    <p>Developed a machine learning model using decision trees and random forests to predict mushroom toxicity with UCI mushroom dataset, achieving high accuracy and interpretability for safe foraging guidance.</p>
+                </div>                
+                <div class="project-card">
+                    <h3>Neural Network Project 🖼️🧠🎨</h3>
+                    <p>Developed an image style transfer application using TensorFlow, transferring artistic styles from reference paintings like Van Gogh's to landscape photos.</p>
+                </div>
+                <div class="project-card">
+                    <h3>🌉 Skybridge Adventure</h3>
+                    <p>
+                        A single-player platformer game developed in Roblox. Players navigate across floating islands and broken bridges, 
+                        dodging obstacles while racing to claim the Winner's Trophy. Test your precision and timing in this challenging 
+                        sky-high adventure!
+                    </p>
+                    <a href="https://www.roblox.com/games/15744493478/" target="_blank" class="project-link">
+                        🎮 Play on Roblox
+                    </a>
+                </div>
+                <div class="project-card">
+                    <h3>🎮 Unity Game Collection</h3>
+                    <p>
+                        A portfolio of various game projects developed using the Unity engine, showcasing different gameplay mechanics 
+                        and design concepts. Each game demonstrates unique approaches to player interaction and game design.
+                    </p>
+                    <a href="https://play.unity.com/en/user/1629e1f1-47c8-4e28-91d7-ef4b47f883f8" target="_blank" class="project-link">
+                        🎲 View Unity Portfolio
+                    </a>
+                </div>            
+            </div>
+        </section>
+
+        <section id="work-experience" class="section">
+            <h2>Internship Experience 💼</h2>
+            <ul class="timeline">
+                <i class="fas fa-laptop-code"></i>
+                <i class="fas fa-code"></i>
+                <li>
+                    <h3>Programmer Intern @ herizon.io</h3>
+                    <p><i class="fas fa-calendar-alt"></i> Oct 2024 - Feb 2025</p>
+                    <p>Developing an MVP (Minimun Viable Product) of a Next.js-based tool for drafting recruitment assessments with the help of AI.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="languages" class="section">
+            <h2>Languages</h2>
+            <div class="language-grid">
+                <div class="language-card">
+                    <h3>Fula</h3>
+                    <p>Mother Tongue</p>
+                </div>
+                <div class="language-card">
+                    <h3>French</h3>
+                    <p>Second Mother Tongue</p>
+                </div>
+                <div class="language-card">
+                    <h3>English</h3>
+                    <p>Advanced (C2)</p>
+                </div>
+                <div class="language-card">
+                    <h3>Finnish</h3>
+                    <p>Advanced (C1)</p>
+                </div>
+                <div class="language-card">
+                    <h3>Spanish</h3>
+                    <p>Beginner (A2)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="section">
+            <h2>Hobbies</h2>
+            <ul class="hobbies-list">
+                <li><i class="fas fa-dumbbell"></i> Gym Training</li>
+                <li><i class="fas fa-circle"></i> Billiards</li>
+                <li><i class="fas fa-futbol"></i> Football</li>
+                <li><i class="fas fa-football-ball"></i> American Football</li>
+                <li><i class="fas fa-bowling-ball"></i> Bowling</li>
+            </ul>
+        </section>
+        
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>🎓 Vantaa Vocational School Varia, diploma:<br>
+                    Basic Degree in Information and Communication Technology<br>
+                    180 credits
+                </li>
+                <li>🎓 Certification: Ethical Hacker from Cisco!</li>
+                <li>🎓 Certification: Networking Essentials from Cisco!</li>
+                <li>🎓 Certification: AWS Academy Graduate - AWS Academy Introduction to Cloud Semester 1 from Amazon Web Services (AWS)!</li>
+                <li>🎓 Has successfully completed the Microsoft Learn AI Skills Challenge, Challenge Period: July 17 – August 14, 2023,
+                    Challenge Name: Machine Learning Opera=ons (MLOps) Challenge</li>
+            </ul>
         </section>
 
         <section id="youtube" class="section">
