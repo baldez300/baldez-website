@@ -225,6 +225,134 @@
             padding: 1rem;
         }
 
+        /* Education section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .education-card {
+            background: var(--text-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .education-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Language section */
+        .language-card {
+            background: var(--text-light);
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+
+        .language-card h3 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--primary-color);
+            flex: 0 0 auto;
+        }
+
+        .language-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+            flex: 0 0 auto;
+        }
+
+        /* .language-card p::before {
+            content: ": ";
+        } */
+
+        /* Certifications grid + badges */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cert-card {
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+            background: var(--text-light);
+            padding: 0.8rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+        }
+
+        .cert-badge {
+            width: 72px;
+            height: 72px;
+            border-radius: 6px;
+            object-fit: cover;
+            flex: 0 0 72px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+        }
+
+        .cert-content {
+            flex: 1;
+        }
+
+        .cert-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.4rem;
+        }
+
+        .cert-desc {
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .cert-actions {
+            margin-top: 0.5rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
+
+        /* Hobbies section */
+
+        .hobbies-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .hobbies-list li {
+            background: var(--text-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
         /* Contact Form */
         .contact-form {
             display: grid;
@@ -484,31 +612,28 @@
 
     <main class="main-content">
         <section id="home" class="section">
-            <h2>📍Welcome to My Portfolio 👋</h2>
-            <p>Hi! I'm Balde, a passionate software engineering student at Metropolia University of Applied Sciences.</p> 
-            <p>I love creating, building innovative solutions and sharing knowledge through my YouTube channel.
-                <a href="https://www.youtube.com/@bal-dez-one" target="_blank">Click <i class="fab fa-youtube"></i></a>
-            </p>
+            <h2>📍 Welcome to My Portfolio 👋</h2>
+            <p>Hi! I'm <strong>Balde</strong>, a passionate <strong>Software Engineering graduate</strong> from Metropolia University of Applied Sciences.</p> 
+            <p>I create and build innovative solutions in <strong>modern web & mobile applications</strong>. I'm passionate about full-stack development, mobile apps and AI integration. I also enjoy sharing what I learn through my <a href="https://www.youtube.com/@bal-dez-one" target="_blank">YouTube channel <i class="fab fa-youtube"></i></a>.</p>
         </section>
 
         <section id="about" class="section">
             <h2>About Me <i class="fas fa-user-circle"></i></h2>
-            <p>I'm a fourth-year student specializing in Information and Communication Technology. My journey in tech has been exciting, and I'm always eager to learn new technologies and share my knowledge with others.</p>
+            <p>I'm a <strong>Bachelor's Degree graduate</strong> specializing in <strong>Information and Communication Technology</strong> from Metropolia University of Applied Sciences. My journey in tech has been exciting and I'm always eager to learn new technologies and share my knowledge with others.</p>
             <br>
             <p>
-                With hands-on experience in full-stack and mobile development, I build scalable and efficient web and mobile applications.<br>
-                From designing UI/UX in Figma to developing powerful backend APIs and cross-platform mobile apps (Flutter, Dart, React Native), I enjoy crafting solutions that make an impact on solving real-world problems.
+                With hands-on experience in <strong>Full-stack</strong> and <strong>Mobile development</strong>, I build scalable and efficient web and mobile applications.<br>
+                From designing UI/UX in Figma to developing powerful backend APIs and cross-platform mobile apps (Flutter, React Native), I enjoy crafting solutions that make an impact on solving real-world problems.
             </p>
             <br>
-            <p>✅ Software Developer</p>
-            <p>✅ Full-Stack Developer</p>
-            <p>✅ Front-End Developer</p>
-            <p>✅ Back-End Developer</p>
-            <p>📱 Mobile Developer (Flutter, Dart, React Native)</p>
-            <p>🎨 UI/UX Designer (Figma, Prototyping)</p>
-            <p>🗄️ Database Management</p>
-            <p>💻 Data Analysis Skills</p>
-            <p>🤖 AI Enthusiast (OpenAI API, AI-driven applications)</p>
+            <h3>🔧 Core Skills</h3>
+            <p>✅ Full-Stack Development (React, Next.js, Node.js, Express)</p>
+            <p>✅ Backend & 🗄️ Databases (PostgreSQL, MongoDB, MySQL)</p>
+            <p>📱 Mobile Development (Flutter, React Native)</p>
+            <p>🎨 UI/UX Design (Figma, Prototyping)</p>
+            <p>🤖 AI Integrations (OpenAI API, AI-powered features)</p>
+            <p>💻 Data Analysis & Visualization (Python: Pandas, NumPy, Matplotlib, Seaborn)</p>
+            <p>📊 Scrum & Agile Development (Trello, GitHub Projects)</p>
             <br>
             <div class="quick-info">
                 <div class="info-item">
@@ -530,21 +655,78 @@
                 <li>
                     <h3>Programmer Intern @ herizon.io</h3>
                     <p><i class="fas fa-calendar-alt"></i> Oct 2024 - Feb 2025</p>
-                    <p>Developed an MVP (Minimum Viable Product) of a Next.js-based tool for drafting recruitment assessments with the help of AI (OpenAI).</p>
+                    <p>
+                        I <strong>developed</strong> an <strong>MVP (Minimum Viable Product)</strong> of a 
+                        <strong>Next.js</strong>-based tool for drafting recruitment assessments with the help of 
+                        <strong>AI (OpenAI API)</strong>.
+                    </p>
                     <br>
                     <ul>
-                        <li>Built a user-friendly assessment editor with real-time AI-generated content.</li>
+                        <li><strong>Built</strong> a user-friendly assessment editor with real-time <strong>AI-generated content</strong>.</li>
                         <br>
-                        <li>Integrated Chakra UI for a responsive and accessible design.</li>
+                        <li><strong>Integrated</strong> <strong>Chakra UI</strong> for a responsive and accessible design.</li>
                         <br>
-                        <li>Refactored the codebase to improve maintainability, reusability, and overall efficiency.</li>
+                        <li><strong>Refactored</strong> the codebase to improve <strong>maintainability</strong>, <strong>reusability</strong> and overall <strong>efficiency</strong>.</li>
                         <br>
-                        <li>Enhanced assessment deletion logic to ensure all related data is properly removed.</li>
+                        <li><strong>Enhanced</strong> assessment deletion logic to ensure all related data is properly removed.</li>
                         <br>
-                        <li>Conducted user testing and gathered feedback to refine tool usability and improve AI-generated drafts.</li>
+                        <li><strong>Conducted</strong> user testing and <strong>gathered feedback</strong> to refine tool usability and improve AI-generated drafts.</li>
                         <br>
-                        <li>Collaborated with the project manager and end-user tester to align development with user needs.</li>
+                        <li><strong>Collaborated</strong> with the project manager and end-user tester to align development with user needs.</li>
                     </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="work-experience" class="section">
+            <h2>Project Experience 💡</h2>
+            <ul class="timeline">
+                <i class="fas fa-users"></i>
+                <i class="fas fa-universal-access"></i>
+
+                <li>
+                    <h3>Multidisciplinary Innovation Project @ VALLI ry</h3>
+                    <p><i class="fas fa-calendar-alt"></i> Feb 2025 – May 2025</p>
+                    <br>
+                    <p>
+                        I contributed to the Moni-ikä-hanke training web-platform by improving UI/UX,
+                        implementing interactive features and solving major frontend issues across
+                        browsers in a React + Next.js environment.
+                    </p>
+                    <br>
+
+                    <!-- Technical Contributions -->
+                    <h4>Technical Contributions</h4>
+
+                    <br><strong>UI/UX Enhancements & Component Styling</strong>
+                    <ul>
+                        <li>Enhanced <strong>ContentArea</strong> component with decorative patterns and improved visuals.</li>
+                        <li>Improved <strong>MainContent</strong> card design and layout structure.</li>
+                        <li>Refined <strong>Sidebar</strong> with updated styling and visual hierarchy.</li>
+                        <li>Updated <strong>Welcome</strong> page decorative elements with cleaner color schemes.</li>
+                    </ul>
+
+                    <br><strong>Interactive Features Implementation</strong>
+                    <ul>
+                        <li>Implemented <strong>image selection</strong> in the TextEditor with clear visual feedback.</li>
+                        <li>Added <strong>keyboard deletion</strong> (Delete/Backspace) support for selected images.</li>
+                        <li>Integrated and customized <strong>quill-image-resize</strong> with additional event handling.</li>
+                    </ul>
+
+                    <br><strong>Bug Fixes & Cross-Browser Compatibility</strong>
+                    <ul>
+                        <li>Resolved Chrome-specific <strong>first-section scroll positioning</strong> bug.</li>
+                        <li>Fixed <strong>anchor link scrolling</strong> with accurate header offset calculations.</li>
+                        <li>Aligned decorative elements consistently across all components.</li>
+                    </ul>
+
+                    <br><strong>Frontend Refinements</strong>
+                    <ul>
+                        <li>Adjusted <strong>dynamic widths</strong> for section titles to improve readability.</li>
+                        <li>Improved <strong>responsive design</strong> for small and large screens.</li>
+                        <li>Optimized CSS by removing unnecessary shadows and refining visual hierarchy.</li>
+                    </ul>
+
                 </li>
             </ul>
         </section>
@@ -555,25 +737,39 @@
                 <i class="fas fa-mobile-alt"></i>
                 <i class="fas fa-brain"></i>
                 <li>
-                    <h3>Mobile Developer Intern @ Moodie-taskuystävä (Wellness App)</h3>
+                    <h3><strong>Mobile Developer Intern</strong> @ Moodie-taskuystävä (Wellness App)</h3>
                     <p><i class="fas fa-calendar-alt"></i> May 2025 - Jun 2025</p>
                     <br>
-                    <p>Worked on the prototype of a mobile application focused on emotional well-being, built using Flutter and Dart.</p>
+                    <p>I worked on the prototype of a mobile application focused on emotional well-being, built using 
+                    <strong>Flutter</strong> and <strong>Dart</strong>.
+                    </p>
                     <br>
-                    <p>Cross-platform support: <i class="fab fa-android"></i> Android & <i class="fab fa-apple"></i> iOS. The app runs on both Android and iOS devices.</p>
+                    <p>Cross-platform support: <i class="fab fa-android"></i> <strong>Android</strong> & 
+                        <i class="fab fa-apple"></i> <strong>iOS</strong>. The app runs on both Android and iOS devices.
+                    </p>
                     <br>
                     <ul>
-                        <li>Designed and implemented interactive UI components for mood tracking, voice input, and breathing exercises.</li>
+                        <li>I designed and implemented interactive <strong>UI components</strong> for 
+                            <strong>mood tracking</strong>, <strong>voice input</strong> and <strong>breathing exercises</strong>.
+                        </li>
                         <br>
-                        <li>Built accessible and responsive layouts with support for screen readers and haptic feedback.</li>
+                        <li>Built accessible and responsive layouts with support for <strong>screen readers</strong> 
+                            and <strong>haptic feedback</strong>.
+                        </li>
                         <br>
-                        <li>Collaborated with a real client and team to plan and iterate GPT-based chatbot integration.</li>
+                        <li>Collaborated with the client/project owner and the dev team to plan and iterate 
+                            <strong>GPT-based chatbot integration</strong>.
+                        </li>
                         <br>
-                        <li>Applied clean architecture and state management (Provider) for scalable, maintainable code.</li>
+                        <li>Applied <strong>clean architecture</strong> and <strong>state management (Provider)</strong> 
+                            for scalable, maintainable code.
+                        </li>
                         <br>
-                        <li>Used GitHub for version control, pull requests, and collaborative development.</li>
+                        <li>Used <strong>Git</strong> & <strong>GitHub</strong> for version control, pull requests and collaborative development.</li>
                         <br>
-                        <li>Packaged and delivered a working prototype with documentation and APK for testing.</li>
+                        <li>Packaged and delivered to the client a working <strong>prototype</strong> with documentation and an
+                            <strong>APK</strong> (Android Package Kit) for testing.
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -768,7 +964,7 @@
                         <h3>Task Manager Web Application:</h3>
                         <ul>
                             <br>
-                            <li>Built with Python Flask, MySQL, HTML, and CSS</li>
+                            <li>Built with Python Flask, MySQL, HTML and CSS</li>
                             <br>
                             <li>Manages tasks</li>
                             <br>
@@ -785,7 +981,7 @@
                         <h3>MERN Authentication and Localization App:</h3>
                         <ul>
                             <br>
-                            <li>Full-stack web application built with the MERN stack (MongoDB, Express.js, React.js, and Node.js)</li>
+                            <li>Full-stack web application built with the MERN stack (MongoDB, Express.js, React.js and Node.js)</li>
                             <br>
                             <li>User authentication (login and registration + landing page)</li>
                             <br>
@@ -793,7 +989,7 @@
                             <br>
                             <li>JSON Web Tokens (JWT) for secure authentication</li>
                             <br>
-                            <li>Localization support for multiple languages (English, Finnish, Japanese, and Arabic)</li>
+                            <li>Localization support for multiple languages (English, Finnish, Japanese and Arabic)</li>
                             <br>
                             <li>Swagger integrated to document the API endpoints</li>
                             
@@ -814,11 +1010,12 @@
                     <div class="education-icon">
                         <i class="fas fa-university"></i>
                     </div>
-                    <h3>Metropolia UAS</h3>
-                    <p class="date">2022 - Present</p>
-                    <p>Information and Communication Technology</p>
+                    <h3>Metropolia University of Applied Sciences</h3>
+                    <p class="date">08/2022 - 11/2025</p>
+                    <p><strong>Information and Communication Technology</strong></p>
                     <ul class="education-details">
                         <li>Full-stack Development</li>
+                        <li>Mobile Application Development</li>
                         <li>Data Handling and Machine Learning</li>
                         <li>Neural Networks</li>
                     </ul>
@@ -829,11 +1026,12 @@
                         <i class="fas fa-school"></i>
                     </div>
                     <h3>Varia Vocational School</h3>
-                    <p class="date">2019 - 2022</p>
-                    <p>Information and Communication Technology</p>
+                    <p class="date">08/2020 - 05/2022</p>
+                    <p><strong>Information and Communication Technology</strong></p>
                     <ul class="education-details">
                         <li>Network Installation</li>
                         <li>Computer Assembly</li>
+                        <li>Software Development</li>
                         <li>Helpdesk Experience</li>
                     </ul>
                 </div>
@@ -849,16 +1047,16 @@
                         <br>
                         <li>Players navigate between airports worldwide, collecting country flags and managing their environmental impact.</li>
                         <br>
-                        <li>Developed using JavaScript for game logic, HTML/CSS for the interface, and SQLite for storing high scores and game data.</li>
+                        <li>Developed using JavaScript for game logic, HTML/CSS for the interface and SQLite for storing high scores and game data.</li>
                     </ul>
                 </div>
                 <div class="project-card">
                     <h3>Heartbeat Sensor ❤️📈</h3>
                     <ul class="circle-list">
                         <br>
-                        <li>Designed and developed a portable heartbeat sensor using MicroPython, Raspberry Pi Pico W, and a PPG (Photoplethysmography) sensor.</li>
+                        <li>Designed and developed a portable heartbeat sensor using MicroPython, Raspberry Pi Pico W and a PPG (Photoplethysmography) sensor.</li>
                         <br>
-                        <li>This real-time system monitors heart electrical activity and displays critical health metrics such as BPM (Beats Per Minute), SDNN (Standard Deviation of Normal-to-Normal intervals), RMSSD (Root Mean Square of Successive Differences), and autonomic nervous system levels (SNS/PNS) (Sympathetic Nervous System/Parasympathetic Nervous System) on an OLED (Organic Light-Emitting Diode) display.</li>
+                        <li>This real-time system monitors heart electrical activity and displays critical health metrics such as BPM (Beats Per Minute), SDNN (Standard Deviation of Normal-to-Normal intervals), RMSSD (Root Mean Square of Successive Differences) and autonomic nervous system levels (SNS/PNS) (Sympathetic Nervous System/Parasympathetic Nervous System) on an OLED (Organic Light-Emitting Diode) display.</li>
                     </ul>
                 </div>
                 <div class="project-card">
@@ -869,7 +1067,7 @@
                         <br>
                         <li>Built with the MERN stack (MongoDB, Express.js, React, Node.js).</li>
                         <br>
-                        <li>The platform includes secure user authentication with JSON Web Tokens, password recovery, Google login, a favorites feature, and a shopping cart for a seamless user experience.</li>
+                        <li>The platform includes secure user authentication with JSON Web Tokens, password recovery, Google login, a favorites feature and a shopping cart for a seamless user experience.</li>
                     </ul>
                 </div>
                 <div class="project-card">
@@ -878,14 +1076,14 @@
                         <br>
                         <li>A full-stack web application that integrates the Spotify API to recommend music based on user preferences.</li>
                         <br>
-                        <li>Built with Django (backend) and TypeScript (frontend).</li>
+                        <li>Built with Django (backend), TypeScript (frontend) and AWS S3 (Simple Storage Service) Storage.</li>
                     </ul>
                 </div>
                 <div class="project-card">
                     <h3>Data Processing and Machine Learning 📊🤖🍄</h3>
                     <ul class="circle-list">
                         <br>
-                        <li>Developed a machine learning model using decision trees and random forests to predict mushroom toxicity with UCI mushroom dataset.</li>
+                        <li>Developed a machine learning model using decision trees and random forests to predict mushroom toxicity with UCI mushroom dataset (University of California, Irvine).</li>
                         <br>
                         <li>Achieving high accuracy and interpretability for safe foraging guidance.</li>
                     </ul>
@@ -918,9 +1116,9 @@
                     <h3>🌉 Skybridge Adventure</h3>
                     <ul class="circle-list">
                         <br>
-                        <li>A single-player platformer game developed in Roblox.</li>
+                        <li>I built a single-player platformer game developed in <strong>Roblox</strong>.</li>
                         <br>
-                        <li>Players navigate across floating islands and broken bridges, dodging obstacles while racing to claim the Winner's Trophy.</li>
+                        <li>The player navigates across <strong>floating islands</strong> and <strong>broken bridge</strong>, dodging obstacles while racing to claim the <strong>Winner's Trophy</strong>.</li>
                         <br>
                         <li>Test your precision and timing in this challenging sky-high adventure!</li>
                     </ul>
@@ -930,7 +1128,7 @@
                     <h3>🎮 Unity Game Collection</h3>
                     <ul class="circle-list">
                         <br>
-                        <li>A portfolio of various game projects developed using the Unity engine.</li>
+                        <li>I built a portfolio of various game projects developed using the <strong>Unity engine</strong>.</li>
                         <br>
                         <li>Showcasing different gameplay mechanics and design concepts.</li>
                         <br>
@@ -945,24 +1143,24 @@
             <h2>Languages</h2>
             <div class="language-grid">
                 <div class="language-card">
-                    <h3>Fula</h3>
+                    <h3>Fula :</h3>
                     <p>Mother Tongue</p>
                 </div>
                 <div class="language-card">
-                    <h3>French</h3>
-                    <p>Second Mother Tongue</p>
+                    <h3>French :</h3>
+                    <p>Native</p>
                 </div>
                 <div class="language-card">
-                    <h3>English</h3>
-                    <p>Advanced (C2)</p>
+                    <h3>English :</h3>
+                    <p>C2 (Advanced)</p>
                 </div>
                 <div class="language-card">
-                    <h3>Finnish</h3>
-                    <p>Advanced (C1)</p>
+                    <h3>Finnish :</h3>
+                    <p>C1 (Advanced)</p>
                 </div>
                 <div class="language-card">
-                    <h3>Spanish</h3>
-                    <p>Beginner (A2)</p>
+                    <h3>Spanish :</h3>
+                    <p>A2 (Beginner)</p>
                 </div>
             </div>
         </section>
@@ -980,17 +1178,104 @@
         
         <section id="certifications" class="section">
             <h2>Certifications</h2>
-            <ul>
-                <li>🎓 Vantaa Vocational School Varia, diploma:<br>
-                    Basic Degree in Information and Communication Technology<br>
-                    180 credits
-                </li>
-                <li>🎓 Certification: Ethical Hacker from Cisco!</li>
-                <li>🎓 Certification: Networking Essentials from Cisco!</li>
-                <li>🎓 Certification: AWS Academy Graduate - AWS Academy Introduction to Cloud Semester 1 from Amazon Web Services (AWS)!</li>
-                <li>🎓 Has successfully completed the Microsoft Learn AI Skills Challenge, Challenge Period: July 17 – August 14, 2023,
-                    Challenge Name: Machine Learning Operations (MLOps) Challenge</li>
-            </ul>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <img src="images/logo-metropolia.png" alt="Metropolia Diploma" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Metropolia University of Applied Sciences — Bachelor's Degree</div>
+                        <div class="cert-meta">Information and Communication Technology — 240 ECTS</div>
+                        <div class="cert-desc">Metropolia UAS offers various Information and Communication Technology (ICT) programs, including a full-time Bachelor of Engineering. The Bachelor's program has a first year with core themes, after which students can choose a major from options like Software Engineering, Web Development and Digital Media, Game Development or Smart IoT Systems.</div>
+                        <div class="cert-actions">
+                            <a href="https://www.metropolia.fi/en/academics/bachelors-degrees/information-technology" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/logo-varia.png" alt="Varia Diploma" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Vantaa Vocational School Varia — Undergraduate Degree</div>
+                        <div class="cert-meta">Undergraduate Degree in Information and Communication Technology — 180 ECTS</div>
+                        <div class="cert-desc">Varia's Information and Communication Technology education is a professional basic qualification that prepares students for diverse roles, such as IT support or software development. It offers practical training that combines theoretical studies, practical exercises and on-the-job learning. The education is suitable for people who are precise, focused and self-initiative.</div>
+                        <div class="cert-actions">
+                            <a href="https://varia.vantaa.fi/fi/palveluhakemisto/palvelu/tieto-ja-viestintatekniikan-perustutkinto" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/cert-cisco-endpoint.png" alt="Cisco Endpoint Security" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Cisco — Endpoint Security</div>
+                        <div class="cert-meta">Cisco Networking Academy</div>
+                        <div class="cert-desc">Successfully completed the Cisco Endpoint Security course via the Networking Academy. Demonstrates foundational skills in protecting devices connecting to modern networks, securing hardware, software and media, and maintaining the confidentiality, integrity and availability of network data.</div>
+                        <div class="cert-actions">
+                            <a href="https://www.credly.com/badges/4b47fc43-f5cd-4353-aaf3-b0423048fbb6/linked_in_profile" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/cert-cisco-eh.png" alt="Cisco Ethical Hacker" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Cisco — Ethical Hacker</div>
+                        <div class="cert-meta">Hands-on offensive security training</div>
+                        <div class="cert-desc">A Cisco Ethical Hacker course provides hands-on experience in offensive security techniques, preparing you to identify and fix vulnerabilities before malicious actors can exploit them. The course is designed to provide practical experience through labs based on real-world scenarios and Capture the Flag (CTF) challenges.</div>
+                        <div class="cert-actions">
+                            <a href="https://www.credly.com/badges/7208a463-54c3-41dc-9026-0a812eeb42f9/linked_in_profile" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/cert-cisco-ne.png" alt="Networking Essentials" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Cisco — Networking Essentials</div>
+                        <div class="cert-meta">Networking fundamentals</div>
+                        <div class="cert-desc">Successfully completing the Cisco Networking Essentials course from the Networking Academy provides a solid foundation in computer networking concepts and practical skills. This course is an ideal starting point for anyone pursuing a career in IT.</div>
+                        <div class="cert-actions">
+                            <a href="https://www.credly.com/badges/f03637ec-d9d2-4916-955a-7a0cf367282b/linked_in_profile" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/cert-cisco-cyber-cybersecurity.png" alt="Cisco Cybersecurity Essentials" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Cisco — Cybersecurity Essentials</div>
+                        <div class="cert-meta">Cisco Networking Academy</div>
+                        <div class="cert-desc">Successfully completing the Cisco Cybersecurity Essentials course through the Networking Academy provides a solid foundation in the principles, technologies, and procedures used to protect networks and data. This entry-level course is designed to equip you with the skills needed for jobs like Cybersecurity Technician or Junior Cybersecurity Analyst.</div>
+                        <div class="cert-actions">
+                            <a href="images/cert-cisco-cyber-cybersecurity.png" class="cert-link" target="_blank" rel="noopener">View badge</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/cert-aws.png" alt="AWS Academy" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">AWS Academy — Introduction to Cloud</div>
+                        <div class="cert-meta">AWS Academy Graduate</div>
+                        <div class="cert-desc">Successfully completing the AWS Academy "Introduction to Cloud: Semester 1" course provides a comprehensive introduction to cloud computing fundamentals. This foundational training, often a stepping stone to the AWS Certified Cloud Practitioner certification, equips you with the core knowledge to understand and discuss the essentials of the AWS cloud.</div>
+                        <div class="cert-actions">
+                            <a href="https://www.credly.com/badges/175e104b-85a2-4238-a33f-146fd85136fe/linked_in_profile" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <img src="images/cert-mlops.png" alt="MLOps Challenge" class="cert-badge">
+                    <div class="cert-content">
+                        <div class="cert-title">Microsoft Learn — MLOps Challenge</div>
+                        <div class="cert-meta">Jul 17 – Aug 14, 2023</div>
+                        <div class="cert-desc">Successfully completing the Microsoft Learn AI Skills Challenge on Machine Learning Operations (MLOps) shows a practical understanding of how to apply DevOps principles to the machine learning lifecycle. The challenge focuses on bridging the gap between data science and IT operations to reliably and efficiently deploy and manage machine learning models in production. Challenge Period: July 17 – August 14, 2023</div>
+                        <div class="cert-actions">
+                            <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/microsoft-learn-ai-skills-challenge/3869868" class="cert-link" target="_blank" rel="noopener">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="youtube" class="section">
