@@ -4,7 +4,7 @@ A modern, responsive and feature-rich personal portfolio website showcasing my s
 
 ## 🎨 Portfolio Preview
 
-My portfolio upper section page screenshot:
+My portfolio upper section page screenshot from web site link: [Balde's Portfolio](https://baldez300.github.io/baldez-website/)
 
 ![Portfolio Preview](images/portfolio-preview.png)
 
@@ -13,19 +13,22 @@ My portfolio upper section page screenshot:
 - [Overview](#overview)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Sections](#sections)
+- [Sections](#sections-breakdown)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Skills & Expertise](#skills--expertise)
 - [How to Customize](#how-to-customize)
 - [Deployment](#deployment)
-- [Contact](#contact)
+- [Contact](#contact--social-links)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Version History](#version-history)
 
 ---
 
-## 🎯 Overview
+## Overview
 
-This portfolio is designed for **recruiters, clients and fellow developers** who want to learn more about my professional background, technical skills and project portfolio. It serves as both a **personal brand** and a **learning resource** for anyone interested in building their own portfolio website.
+🎯 This portfolio is designed for **recruiters, clients and fellow developers** who want to learn more about my professional background, technical skills and project portfolio. It serves as both a **personal brand** and a **learning resource** for anyone interested in building their own portfolio website.
 
 ### Who is this for?
 - **Recruiters** - Explore my experience, skills and completed projects
@@ -35,7 +38,7 @@ This portfolio is designed for **recruiters, clients and fellow developers** who
 
 ---
 
-## ✨ Features
+## Features
 
 ### 🎨 User Experience
 - ✅ **Responsive Design** - Works perfectly on desktop, tablet and mobile devices
@@ -47,7 +50,7 @@ This portfolio is designed for **recruiters, clients and fellow developers** who
 ### 📱 Core Sections
 - **Home** - Welcome section with quick introduction
 - **About Me** - Detailed background and core skills overview
-- **Experience** - Internship and project experience with detailed descriptions
+- **Experience** - Internship and project experiences with detailed descriptions
 - **Skills** - Comprehensive skills organized by category (Front-end, Back-end, Mobile, Databases, CI/CD, DevOps, etc.)
 - **Projects** - Showcase of completed projects with descriptions and GitHub links
 - **Education** - Academic background and study projects
@@ -66,7 +69,7 @@ This portfolio is designed for **recruiters, clients and fellow developers** who
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 ### Frontend
 - **HTML5** - Semantic markup structure
@@ -77,13 +80,13 @@ This portfolio is designed for **recruiters, clients and fellow developers** who
 - **Font Awesome 6.4.0** - Icon library
 - **Google Fonts** - Poppins font family
 
-### Deployment
+### 🌐 Deployment
 - **GitHub Pages** - Static site hosting
-- **Vercel** - Alternative deployment option
+- **Vercel** - Alternative deployment option Or other hosting services like `Netlify`
 
 ---
 
-## 📑 Sections Breakdown
+## Sections Breakdown
 
 ### 1. **Header & Navigation**
 - Fixed header with logo, name and social media links (LinkedIn, YouTube, GitHub)
@@ -157,7 +160,7 @@ Professional certifications with:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Basic knowledge of HTML, CSS & JavaScript
@@ -190,11 +193,11 @@ python -m http.server 8000
 npx http-server
 ```
 
-Then navigate to `http://localhost:8000` OR `http://127.0.0.1:8080` in your browser.
+Then navigate to `http://localhost:8000` OR `http://127.0.0.1:8080` in your browser. In VS Code Live Server or Preview extensions can also be used.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 baldez-website/
@@ -224,7 +227,7 @@ baldez-website/
 
 ---
 
-## 💼 Skills & Expertise
+## Skills & Expertise
 
 ### **Full-Stack Development**
 - React, Next.js, Node.js, Express.js
@@ -259,7 +262,7 @@ baldez-website/
 
 ---
 
-## 🎨 How to Customize
+## How to Customize
 
 ### 1. **Update Personal Information**
 ```html
@@ -286,6 +289,8 @@ baldez-website/
 ```html
 <!-- Replace URLs in header section -->
 <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+
+<!-- Repeat for GitHub, YouTube -->
 ```
 
 ### 5. **Modify Content**
@@ -307,13 +312,14 @@ baldez-website/
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
 ### **GitHub Pages** (Recommended)
 1. Push your repository to GitHub
 2. Enable GitHub Pages in Settings
 3. Select branch and folder
-4. Your portfolio will be live at `https://username.github.io/baldez-website`
+4. Your portfolio will be live at `https://your-github-username.github.io/your-repoName/`
+5. Change `your-github-username` and `your-repoName` accordingly
 
 ### **Vercel**
 1. Connect your GitHub repository to Vercel
@@ -346,22 +352,22 @@ This portfolio demonstrates:
 
 ---
 
-## 📞 Contact & Social Links
+## Contact & Social Links
 
 - **LinkedIn**: [Balde Mamadou](https://www.linkedin.com/in/balde-mamadou-5a4a75209)
-- **GitHub**: [@baldez300](https://github.com/baldez300)
+- **GitHub**: [@baldez300](https://github.com/baldez300?tab=repositories)
 - **YouTube**: [@bal-dez-one](https://www.youtube.com/@bal-dez-one)
 - **Email**: Contact via LinkedIn or social media
 
 ---
 
-## 📄 License
+## License
 
 This portfolio is open-source and available for personal and educational use. Feel free to use it as a template for your own portfolio.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Font Awesome** - Icon library
 - **Google Fonts** - Typography
@@ -370,17 +376,18 @@ This portfolio is open-source and available for personal and educational use. Fe
 
 ---
 
-## 📝 Version History
+## Version History
 
-- **v1.0** (December 2025) - Initial portfolio public launch
-  - Home, About, Experience, Skills sections
+- **v1.0** (June 2025) - Initial portfolio public launch
+  - Home, About, Experience, Skills, Projects, Education sections
+- **v1.1** (November 2025) - Added Dark Mode and Certifications section
   - Mobile-responsive design
   - Dark mode toggle
   - Certifications grid with badges
 
 ---
 
-**Last Updated**: December 2025  
+**Last Updated**: January 08, 2026  
 **Status**: ✅ Active & Maintained
 
 ---
@@ -389,15 +396,19 @@ This portfolio is open-source and available for personal and educational use. Fe
 
 | Section | Link |
 |---------|------|
-| Home | [Jump to Home](#home) |
-| About | [Jump to About](#about) |
-| Experience | [Jump to Experience](#work-experience) |
-| Skills | [Jump to Skills](#skills) |
-| Projects | [Jump to Projects](#projects) |
-| Education | [Jump to Education](#education) |
-| Certifications | [Jump to Certifications](#certifications) |
-| Contact | [Jump to Contact](#contact) |
+| Overview | [Jump to Overview](#overview) |
+| Features | [Jump to Features](#features) |
+| Technologies | [Jump to Technologies](#technologies-used) |
+| Sections | [Jump to Sections](#sections-breakdown) |
+| Getting Started | [Jump to Getting Started](#getting-started) |
+| Skills & Expertise | [Jump to Skills](#skills--expertise) |
+| How to Customize | [Jump to Customize](#how-to-customize) |
+| Deployment | [Jump to Deployment](#deployment) |
+| Contact | [Jump to Contact](#contact--social-links) |
+| License | [Jump to License](#license) |
+| Acknowledgments | [Jump to Acknowledgments](#acknowledgments) |
+| Version History | [Jump to Version History](#version-history) |
 
 ---
 
-Made with ❤️ by **Balde** | Software Engineering Graduate | Helsinki, Finland
+Made with ❤️ by **Balde** | Software Engineering Graduate from Metropolia University of Applied Sciences | Helsinki, Finland
