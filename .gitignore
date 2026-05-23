@@ -27,4 +27,5 @@ build/
 *.tgz
 *.zip
 *.tar.gz
-*.rar   
+*.rar
+cv-copy-updates.md   
