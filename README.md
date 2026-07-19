@@ -355,7 +355,7 @@ This portfolio demonstrates:
 ## Contact & Social Links
 
 - **LinkedIn**: [Balde Mamadou](https://www.linkedin.com/in/balde-mamadou-5a4a75209)
-- **GitHub**: [@baldez300](https://github.com/baldez300?tab=repositories)
+- **GitHub**: [@baldez300](https://github.com/baldez300)
 - **YouTube**: [@bal-dez-one](https://www.youtube.com/@bal-dez-one)
 - **Email**: Contact via LinkedIn or social media
 

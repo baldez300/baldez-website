@@ -587,6 +587,16 @@
             overflow: hidden;
         }
 
+        .project-card.featured-project {
+            border-color: rgba(15, 118, 110, 0.32);
+            grid-column: span 2;
+        }
+
+        .featured-project {
+            display: grid;
+            grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+        }
+
         .project-card img {
             aspect-ratio: 16 / 10;
             background: var(--surface-alt);
@@ -594,11 +604,37 @@
             width: 100%;
         }
 
+        .featured-project img {
+            aspect-ratio: auto;
+            height: 100%;
+            object-fit: contain;
+            padding: 1.25rem;
+        }
+
         .project-body {
             display: flex;
             flex: 1;
             flex-direction: column;
             padding: 1.1rem;
+        }
+
+        .project-kicker {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .status-pill {
+            background: rgba(37, 99, 235, 0.10);
+            border: 1px solid rgba(37, 99, 235, 0.22);
+            border-radius: 999px;
+            color: var(--accent);
+            display: inline-flex;
+            font-size: 0.78rem;
+            font-weight: 800;
+            line-height: 1.2;
+            padding: 0.35rem 0.6rem;
         }
 
         .project-body h3 {
@@ -830,6 +866,10 @@
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
+            .project-card.featured-project {
+                grid-column: span 2;
+            }
+
             .language-grid,
             .hobbies-list {
                 grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -919,6 +959,19 @@
             .language-grid,
             .hobbies-list {
                 grid-template-columns: 1fr;
+            }
+
+            .project-card.featured-project {
+                grid-column: span 1;
+            }
+
+            .featured-project {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-project img {
+                aspect-ratio: 16 / 10;
+                height: auto;
             }
 
             .timeline-item,
