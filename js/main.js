@@ -8,6 +8,8 @@ const menuToggle = document.querySelector("#menuToggle");
         const currentLanguageLabel = document.querySelector("#currentLanguageLabel");
         const languageButtons = document.querySelectorAll(".language-option");
         const originalContent = new Map();
+        const originalTitle = document.title;
+        const originalDescription = document.querySelector("meta[name='description']").getAttribute("content");
         const languageLabels = {
             en: "🇬🇧 English",
             fi: "🇫🇮 Suomi",
@@ -58,8 +60,8 @@ const menuToggle = document.querySelector("#menuToggle");
                     element[property] = value;
                 });
             } else {
-                document.title = "Balde Mamadou | Software Developer Portfolio";
-                document.querySelector("meta[name='description']").setAttribute("content", "Portfolio of Balde Mamadou, a software engineering graduate in Helsinki focused on full-stack, mobile, AI-integrated applications and IT support.");
+                document.title = originalTitle;
+                document.querySelector("meta[name='description']").setAttribute("content", originalDescription);
                 originalContent.forEach((content, selector) => {
                     const element = document.querySelector(selector);
                     if (!element) return;
