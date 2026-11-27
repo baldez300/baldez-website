@@ -604,6 +604,15 @@
             width: 100%;
         }
 
+        .project-card .invaders-cover {
+            aspect-ratio: 968 / 538;
+            object-fit: contain;
+        }
+
+        #invaders-stack {
+            margin-top: 1rem;
+        }
+
         .featured-project img {
             aspect-ratio: auto;
             height: 100%;
